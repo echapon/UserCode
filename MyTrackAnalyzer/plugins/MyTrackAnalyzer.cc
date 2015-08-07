@@ -87,9 +87,9 @@ MyTrackAnalyzer::MyTrackAnalyzer(const edm::ParameterSet& iConfig)
    // usesResource("TFileService");
 
    edm::Service<TFileService> fs;
-   hAlgo = fs->make<TH1F>("hAlgo;Final trk algo;# entries","trk algo",NTRKALGO,0,NTRKALGO);
-   hOrigAlgo = fs->make<TH1F>("hOrigAlgo;Original trk algo;# entries","original trk algo",NTRKALGO,0,NTRKALGO);
-   hAlgoHist = fs->make<TH2F>("hAlgoHist;Final trk algo;trk algo history","trk algo history",NTRKALGO,0,NTRKALGO,NTRKALGO,0,NTRKALGO);
+   hAlgo = fs->make<TH1F>("hAlgo","trk algo;Final trk algo;# entries",NTRKALGO,0,NTRKALGO);
+   hOrigAlgo = fs->make<TH1F>("hOrigAlgo","original trk algo;Original trk algo;# entries",NTRKALGO,0,NTRKALGO);
+   hAlgoHist = fs->make<TH2F>("hAlgoHist","trk algo history;Final trk algo;trk algo history",NTRKALGO,0,NTRKALGO,NTRKALGO,0,NTRKALGO);
 }
 
 
